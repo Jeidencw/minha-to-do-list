@@ -1,0 +1,94 @@
+*{
+    margin: 0;   
+    padding: 0;
+}
+
+.container{
+    width: 100%;
+    padding: 5px;
+    min-height: 100vh;
+    background: linear-gradient(150deg, #00CED1, rgba(0, 206, 209, 0.1));
+}
+
+.todo-app{
+    background: #fff;
+    width: 90%;
+    max-width: 540px;
+    margin: 100px auto 20px;
+    border-radius: 20px;
+    padding: 15px;
+    text-align: center;
+}
+
+.todo-app h2{
+    margin-bottom: 20px;
+    font-size: 40px;
+}
+
+.row{
+    background-color: lightgray;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+input{
+    flex: 1;
+    border-style: none;
+    outline: none;
+    background-color: transparent;
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+button{ 
+    border-style: none;
+    background-color: #00CED1;
+    padding: 10px 30px;
+    border-radius: 20px;
+    transition: .3s all;
+    font-size: 20px;
+}
+
+button:hover{
+    background-color:#20B2AA;
+}
+
+ul li{
+    position: relative;
+    display: flex;
+    list-style: none;
+    padding: 5px 0 5px 8px;
+    border-radius: 20px;
+    background-color: rgba(0, 206, 209, 0.5);
+    margin-top: 7px;
+    font-size: 22px;
+}
+
+
+ul li::before {
+    content: "";
+    background-image: url("img/uncheckedBlack.png");
+    width: 24px; 
+    margin-right: 10px;
+    background-size: cover;
+}
+
+ul li.check{
+    text-decoration: line-through;
+}
+
+ul li.check::before {
+    background-image: url("img/checkBlack.png");
+}
+
+ul li span {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 25px;
+    line-height: 40px;
+    cursor: pointer;
+    font-weight: 600;
+}
